@@ -1,0 +1,173 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    container-type: inline-size;
+    container-name: vista;
+    background-color: #030314;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*Fondo Section*/
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    border: 2px solid black;
+    font-family: sans-serif;
+    color: white;
+    width: 100%;
+}
+
+.moon{
+    width: 200px;
+    height: 200px;
+    background-color: #ffdb58a4;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    transform: -50% -50%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    animation: --monnEfect 3s 1s both linear infinite alternate;
+}
+.moon_relleno{
+    background-color: #030314;
+    color: black;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: -90px;
+    margin-top: -40px;
+}
+.start{
+    background-color: white;
+    width: 5px;
+    height: 5px;
+    font-size: 1px;
+    border-radius: 50%;
+    position: absolute;
+}
+.main :nth-child(2){
+    top: 20px;
+    right: 20px;
+    transform: -50% -50%;
+    animation: --estrellasEfect 3s 3s both linear infinite alternate;
+}
+.main :nth-child(3){
+    left: 5%;
+    animation: --estrellasEfect 2s 1s both linear infinite alternate;
+}
+.main :nth-child(4){
+
+    bottom: 5%;
+    left: 20%;
+    animation: --estrellasEfect 3s 5s both linear infinite alternate;
+}
+.main :nth-child(5){
+    right: 5%;
+    animation: --estrellasEfect 1s 1s both linear infinite alternate;
+}
+
+/*Moon Queries*/
+@container vista (max-width: 53.25rem){
+    
+    .moon{
+        width: 100px;
+        height: 100px;
+
+    }
+    .moon_relleno{
+        width: 100px;
+        height: 100px;
+        margin-right: -40px;
+        margin-top: -20px;
+    }
+}
+
+/*Fondo Section*/
+
+
+
+/*Formulario Section*/
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    overflow: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    color: white;
+    border: 2px solid white;
+    border-radius: 18px;
+    padding: 10px;
+    
+}
+.form input, label, div{
+    padding: 5px;
+    margin: 2px 0;
+    border-radius: 8px;
+}
+.form input{
+    border: 1px solid #010152;
+
+}
+
+.input_aceptar{
+    color: white;
+    background-color: #010152;
+
+}
+
+
+.label_form{
+    text-align: center;
+    font-size: 2rem;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+/*Formulario Section end*/
+
+
+
+
+
+
+/*Cielo Animaciones Section*/
+@keyframes --estrellasEfect{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+        background-color: #eeff00a4;
+
+    }
+}
+
+@keyframes --monnEfect{
+    from{
+        background-color: #eeff0044;
+    }
+    to{
+        opacity: 1;
+        background-color: #eeff00e7;
+    }
+}
